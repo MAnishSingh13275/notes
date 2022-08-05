@@ -1,8 +1,7 @@
 import React from "react";
 
-function Form({ title, setTitle, desc, setDesc, setAddNote }) {
-    
-    
+function Form({title, setTitle, desc, setDesc, setAddNote }) {
+
     const inputHandler = (e) => {
         if (e.target.id === "title") {
             setTitle(e.target.value)
@@ -10,20 +9,20 @@ function Form({ title, setTitle, desc, setDesc, setAddNote }) {
             setDesc(e.target.value)
         }
     }
-   
-   
+
+
     const errorHandler = () => {
         document.getElementById("title").classList.add("danger")
         document.getElementById("description").classList.add("danger")
     }
-   
-   
+
+
     const removeErrorHandler = () => {
         document.getElementById("description").classList.remove("danger")
         document.getElementById("title").classList.remove("danger")
     }
 
-  
+
     const addNoteHandler = (e) => {
         e.preventDefault()
         if (title !== "" && desc !== "") {
@@ -53,7 +52,8 @@ function Form({ title, setTitle, desc, setDesc, setAddNote }) {
             setTitle("")
             setDesc("")
             removeErrorHandler()
-        } else if (title.length < 10 && title.length < 0 && desc !== "") {
+        }
+        else if (title.length < 10 && title.length < 0 && desc !== "") {
             setAddNote((note) => {
                 return (
                     [...note, {
@@ -70,7 +70,7 @@ function Form({ title, setTitle, desc, setDesc, setAddNote }) {
         else {
             errorHandler()
         }
-    }
+    };
 
     return (
         <div className="container">

@@ -18,7 +18,7 @@ function App() {
       <Navbar />
       <div className="d-flex">
         <div className="left">
-          <Form title={title} setTitle={setTitle} desc={desc} setDesc={setDesc} addNote={addNote} setAddNote={setAddNote} />
+          <Form  title={title} setTitle={setTitle} desc={desc} setDesc={setDesc} addNote={addNote} setAddNote={setAddNote} />
           <div className="bar"></div>
         </div>
         <div className="right">
