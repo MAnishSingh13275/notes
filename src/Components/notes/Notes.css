@@ -1,0 +1,13 @@
+.card-body{
+    width: 33vw;
+    height: 31vh;
+}
+.button{
+    position: absolute;
+    bottom: 5px;
+    right: 2px;
+}
+.card-text{
+    overflow: auto;
+    height: 20vh;
+}
